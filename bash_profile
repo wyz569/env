@@ -1,18 +1,17 @@
-# .bash_profile
-
+# bash_profile
+# https://raw.githubusercontent.com/wyz569/env/refs/heads/main/bash_profile
 # Get the aliases and functions
 alias a='alias'
-alias i='icfb &'
-alias v='virtuoso &'
 alias sb='source ~/.bashrc'
 alias g='gvim'
 alias gv='gvim'
 alias gdiff='gvimdiff'
+a xs='cd'
 a cd..='cd ..'
 a ..='cd ..'
 a ...='cd ../..'
 a ....='cd ../../../'
-a cp='cp r'
+a cp='cp -r'
 a la='ls -lrta'
 a ll='ls -lhv'
 a l='ls -lhv'
@@ -22,7 +21,7 @@ a du='du -ks'
 a ln='ln -s'
 a nau='nautilus' 
 a nau.='nautilus .'
-a rm='/home/wyz/Documents/perl/del.pl'
+#a rm='/home/wyz/Documents/perl/del.pl'
 #查找 文本1包含参数2的所有行
 function cap() {
   cat "$1" | grep "$2"
