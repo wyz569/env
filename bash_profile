@@ -6,7 +6,8 @@ alias sb='source ~/.bashrc'
 alias g='gvim'
 alias gv='gvim'
 alias gdiff='gvimdiff'
-a py3='python3'
+a nau='nautilus' 
+a nau.='nautilus .'
 a xs='cd'
 a cd..='cd ..'
 a ..='cd ..'
@@ -20,9 +21,12 @@ a lt='ls -lrth'
 a df='df -l'
 a du='du -ks'
 a ln='ln -s'
-a nau='nautilus' 
-a nau.='nautilus .'
+
 #a rm='/home/wyz/Documents/perl/del.pl'
+
+a py='python'
+a py3='python3'
+
 #查找 文本1包含参数2的所有行
 function cap() {
   cat "$1" | grep "$2"
