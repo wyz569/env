@@ -2,7 +2,7 @@
 filetype plugin on           "共享剪贴板 
 set ruler                    "编辑过程中,右下角显示光标位置的状态行
 winpos 550 100               "设定窗口位置  
-set lines=40 columns=90      "设定窗口大小
+set lines=45 columns=90      "设定窗口大小
 set nu                       "显示行号 
 set ignorecase               "搜索忽略大小写 
 set clipboard=unnamed        "把内容复制到系统剪贴板
