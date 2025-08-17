@@ -1,3 +1,4 @@
+"https://raw.githubusercontent.com/wyz569/env/refs/heads/main/_vimrc
 set nocompatible
 source $VIMRUNTIME/vimrc_example.vim
 "source $VIMRUNTIME/mswin.vim
@@ -134,4 +135,5 @@ let NERDTreeIgnore=['\.pyc','\~$','\.swp']
 let NERDTreeShowBookmarks=1
 set number
 "noremap <LeftRelease> "+y<LeftRelease>  “鼠标选中复制
+
 
