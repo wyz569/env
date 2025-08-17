@@ -21,8 +21,10 @@ set guifont=Monospace\ 13
 set  backspace=indent,eol,start
 colorscheme evening            " 设置配色方案
 filetype plugin indent on     
+"文件备份
 set nobackup
 set nowritebackup
+set noswapfile
 " 当前行高亮
 autocmd InsertLeave,WinEnter * set cursorline
 autocmd InsertEnter,WinLeave * set nocursorline
