@@ -30,7 +30,7 @@ endfunction
  
 
 winpos 750 70 "设定窗口位置
-set lines=40 columns=100   " 设定窗口大小  
+set lines=45 columns=100   " 设定窗口大小  
 "设置文件的代码形式 utf8
 set encoding=utf-8
 set termencoding=utf-8
@@ -71,7 +71,6 @@ set autoread   "设置当文件在外部被修改，自动更新该文件
 set mouse=a   "设置在任何模式下鼠标都可用
 "set selection=exclusive
 "set selectmode=mouse,key
-set nobackup   "设置不生成备份文件
 "set go=    "不要图形按钮
 "set guioptions-=T           " 隐藏工具栏
 "set guioptions-=m           " 隐藏菜单栏
@@ -103,9 +102,10 @@ set cursorline "启用光标行
 set guicursor+=a:blinkon0 "设置光标不闪烁
 set fdm=indent "
 set clipboard=unnamed   "把内容复制到系统剪贴板
-
+"文件备份
 set nobackup
 set nowritebackup 
+set noswapfile
 "插件管理
 "set rtp+=$VIM\vimfiles\bundle\Vundle.vim\
 "call vundle#begin()
@@ -134,3 +134,4 @@ let NERDTreeIgnore=['\.pyc','\~$','\.swp']
 let NERDTreeShowBookmarks=1
 set number
 "noremap <LeftRelease> "+y<LeftRelease>  “鼠标选中复制
+
