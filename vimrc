@@ -1,4 +1,4 @@
-#https://raw.githubusercontent.com/wyz569/env/refs/heads/main/vimrc
+"https://raw.githubusercontent.com/wyz569/env/refs/heads/main/vimrc
 filetype plugin on           "共享剪贴板 
 set ruler                    "编辑过程中,右下角显示光标位置的状态行
 winpos 550 100               "设定窗口位置  
