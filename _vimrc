@@ -136,4 +136,23 @@ let NERDTreeShowBookmarks=1
 set number
 "noremap <LeftRelease> "+y<LeftRelease>  “鼠标选中复制
 
+func! CPword(reg)
+    let hits=[]
+    %s//\=len(add(hits,submatch(0))) ? submatch(0) : ''/gne
+    let reg=empty(a:reg) ? '*' : a:reg
+    exe 'let @'.reg.'=join(hits,"\n"). "\n"'
+    return hits
+endfun
+
+command! -register CPword call CPword(<q-reg>)
+"copy match pattern line
+func! CPline(pattern)
+"exe' normal qaq'
+let @a=@_
+"A: append all match line to reg a
+exe 'g/' . a:pattern . '/y A'
+let @*=@a
+return a:pattern
+endfunc
+command! -register CPline call CPline(<q-reg>)
 
