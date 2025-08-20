@@ -53,9 +53,32 @@ an 100.540 &Short.&File\ Type<Tab> : set filetype<CR>
 "an 72.300 &BookMark.-sep-：
 "slm:selectmode func！<SID>CopyALl（）
 
+func! CPword(reg)
+    let hits=[]
+    %s//\=len(add(hits,submatch(0))) ? submatch(0) : ''/gne
+    let reg=empty(a:reg) ? '*' : a:reg
+    exe 'let @'.reg.'=join(hits,"\n"). "\n"'
+    return hits
+endfun
+"copy 
+command! -register CPword call CPword(<q-reg>)
+"copy match pattern line
+func! CPline(pattern)
+"exe' normal qaq'
+let @a=@_
+"A: append all match line to reg a
+exe 'g/' . a:pattern . '/y A'
+let @*=@a
+return a:pattern
+endfunc
+command! -register CPline call CPline(<q-reg>)
+
+
 "打开文件类型检测, 加了这句才可以用智能补全
 set completeopt=longest,menu
 "au BufWinLeave * mkview
 "au BufWinEnter * silent loadview
 "source /home/work/Documents/vimscripts/CompileRunGcc.vim
 autocmd BufWritePost $MYVIMRC source $MYVIMRC  
+
+
